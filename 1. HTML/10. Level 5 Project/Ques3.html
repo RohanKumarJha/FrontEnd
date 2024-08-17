@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form>
+        <h1>Step 1 : Your details</h1>
+        <label for="name">Name : </label>
+        <input type="text" id="name" placeholder="First and last name" required> <br>
+        <label for="email">Email : </label>
+        <input type="email" id="email" placeholder="exapmle@domain.com" required> <br>
+        <label for="phoneNo">Phone : </label>
+        <input type="tel" min="10" max="10" placeholder="Eg. +4475000000" required> <br>
+
+        <h1>Step 2 : Delivery address</h1>
+        <label for="address">Address : </label>
+        <textarea name="address" id="address" cols="25" rows="4"></textarea> <br>
+        <label for="code">Post Code : </label>
+        <input type="tel" id="code" min="6" max="6"> <br>
+        <label for="country">Country Code : </label>
+        <input type="tel" id="country" min="4" max="4"> <br>
+
+        <h1>Step 3 : Card Details</h1>
+        <h3>Card type</h3>
+        <input type="radio" name="cardType" id="VISA" value="VISA">
+        <label for="VISA">VISA</label>
+        <input type="radio" name="cardType" id="AmEx" value="AmEx">
+        <label for="AmEx">AmEx</label>
+        <input type="radio" name="cardType" id="Mastercard" value="Mastercard">
+        <label for="Mastercard">Mastercard</label> <br>
+        <label for="number">Card Number : </label>
+        <input type="tel" id="number" max="10" min="10"> <br>
+        <label for="nameoncard">Name on card</label>
+        <input type="text" placeholder="Exact name as on card"> <br>
+        <button type="submit">BUY IT!</button>
+    </form>
+</body>
+</html>
