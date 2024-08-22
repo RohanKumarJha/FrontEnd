@@ -1,0 +1,28 @@
+Level 1
+****************
+Starting Up
+Basics of HTML(Tags, Emmet, HTML Page, MDN Documentation, Comments, Case Sensitivity)
+
+Level 2
+****************
+HTML Attributes(Id Property)
+HTML Tags(h1-h6, p, br, hr, img, video, a, b, i, u, strike, pre, big, small, sup, sub)
+
+Level 3
+****************
+Browsers Tools(View Page sourece, Inspect)
+Responsive Design
+Validating web pages(validator.w3.org)
+
+Level 4
+****************
+Semantic/Non-semantic tags
+Body tags(header, main(section, article, aside), footer)
+More tags(nav, block/inline, div,span
+
+Level 5
+****************
+List(ordered, unordered)
+Table(tr, th, td, caption, colspan)
+Forms(input, action attributes, name and value property, label, exploring types)
+IFrame
