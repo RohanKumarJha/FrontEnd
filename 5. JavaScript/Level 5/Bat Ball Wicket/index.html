@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bat Ball Stump</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin: 14px 14px;
+            line-height: 1.5;
+        }
+        .container h1 {
+            font-size: 50px;
+            font-weight: 900;
+        }
+        .btn {
+            font-size: 20px;
+            font-weight: 600;
+            padding: 8px 18px;
+            border-radius: 8px;
+            margin-right: 12px;
+        }
+        .decision {
+            font-size: 24px;
+            margin: 12px 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bat Ball Stump Game</h1>
+        <button class="btn" onclick="
+        if(compResult == 1) {
+            finalDec = `Comp choose ball, so you won the game`;
+            document.querySelector('.decision').innerText = finalDec;
+        } else if(compResult == 2) {
+            finalDec = `Comp choose wicket, so you loose the game`;
+            document.querySelector('.decision').innerText = finalDec;
+        } else {
+            finalDec = `Both having same choice, game is draw`;
+            document.querySelector('.decision').innerText = finalDec;
+        }
+        ">Bat</button>
+
+        <button class="btn" onclick="
+        if(compResult == 0) {
+            finalDec = `Comp choose bat, so you loose the game`;
+            document.querySelector('.decision').innerText = finalDec;
+        } else if(compResult == 2) {
+            finalDec = `Comp choose wicket, so you won the game`;
+            document.querySelector('.decision').innerText = finalDec;
+        } else {
+            finalDec = `Both having same choice, game is draw`;
+            document.querySelector('.decision').innerText = finalDec;
+        }
+        ">Ball</button>
+
+        <button class="btn" onclick="
+        if(compResult == 0) {
+            finalDec = `Comp choose bat, so you won the game`;
+            document.querySelector('.decision').innerText = finalDec;
+        } else if(compResult == 1) {
+            finalDec = `Comp choose ball, so you loose the game`;
+            document.querySelector('.decision').innerText = finalDec;
+        } else {
+            finalDec = `Both having same choice, game is draw`;
+            document.querySelector('.decision').innerText = finalDec;
+        }
+        ">Stump</button>
+        <p class="decision"></p>
+    </div>
+    <script>
+        let finalDec = '';
+        document.querySelector('.decision').innerText = finalDec;
+
+        let compResult = Math.round(Math.random()*3);
+    </script>
+</body>
+</html>

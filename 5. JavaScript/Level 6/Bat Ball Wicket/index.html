@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bat Ball Stump</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin: 14px 14px;
+            line-height: 1.5;
+        }
+        .container h1 {
+            font-size: 50px;
+            font-weight: 900;
+        }
+        .btn {
+            font-size: 20px;
+            font-weight: 600;
+            padding: 8px 18px;
+            border-radius: 8px;
+            margin-right: 12px;
+        }
+        .decision {
+            font-size: 24px;
+            margin: 12px 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bat Ball Stump Game</h1>
+        <button class="btn" onclick="
+        let choice = generateComputerChoice();
+        getResult('Bat', choice);
+        ">Bat</button>
+
+        <button class="btn" onclick="
+        let choice2 = generateComputerChoice();
+        getResult('Ball', choice2);
+        ">Ball</button>
+
+        <button class="btn" onclick="
+        let choice3 = generateComputerChoice();
+        getResult('Wicket', choice3);
+        ">Stump</button>
+
+        <p class="decision"></p>
+    </div>
+    <script>
+        let finalDec = '';
+        document.querySelector('.decision').innerText = finalDec;
+
+        function generateComputerChoice() {
+            let randomNumber = Math.random()*3;
+            if(randomNumber > 0 && randomNumber <=1) {
+                return 'Bat';
+            } else if(randomNumber > 1 && randomNumber <=2) {
+                return 'Ball';
+            } else {
+                return 'Wicket';
+            }
+        }
+
+        function getResult(userChoice, compChoice) {
+            if(userChoice == compChoice) {
+                finalDec = `It's a tie`;
+                document.querySelector('.decision').innerText = finalDec;
+            } else if(userChoice == 'Bat' && compChoice == 'Ball') {
+                finalDec = `User Won`;
+                document.querySelector('.decision').innerText = finalDec;
+            } else if(userChoice == 'Bat' && compChoice == 'Wicket') {
+                finalDec = `Comp won`;
+                document.querySelector('.decision').innerText = finalDec;
+            } else if(userChoice == 'Ball' && compChoice == 'Bat') {
+                finalDec = `Comp Won`;
+                document.querySelector('.decision').innerText = finalDec;
+            } else if(userChoice == 'Ball' && compChoice == 'Wicket') {
+                finalDec = `User Won`;
+                document.querySelector('.decision').innerText = finalDec;
+            } else if(userChoice == 'Wicket' && compChoice == 'Bat') {
+                finalDec = `User Won`;
+                document.querySelector('.decision').innerText = finalDec;
+            } else {
+                finalDec = `Comp Won`;
+                document.querySelector('.decision').innerText = finalDec;
+            }
+        }
+
+    </script>
+</body>
+</html>
