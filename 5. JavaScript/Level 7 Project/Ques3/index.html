@@ -5,13 +5,12 @@
 </head>
 <body>
     <script>
-        let product = {
-            name : 'Jeans',
-            size : 'S',
-            fit : 'Slim Fit',
-            deliveryTime : 'Same day delivery',
-        };
-        console.log(product['deliveryTime']);
+        let prod = {
+            ProdName : 'IPhone',
+            ProdPrice : 50000,
+            deliveryTime : ['On the same day'],
+        }
+        console.log(`ProdName : ${prod.ProdName}, ProdPrice : ${prod.ProdPrice}, DeliveryTime : ${prod['deliveryTime']}`);
     </script>
 </body>
 </html>

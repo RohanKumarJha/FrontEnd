@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ques2</title>
 </head>
 <body>
     <script>
-        // let obj1 = 10; obj2 = obj1;
-        // console.log(`Obj1 : ${obj1} and obj2 : ${obj2}`);
-        // obj1 = 20;
-        // console.log(`Obj1 : ${obj1} and obj2 : ${obj2}`);
+        // Normal
+        let a=2, b=a;
+        console.log(`a:${a}, b:${b}`);
+        a=5;
+        console.log(`a:${a}, b:${b}`);
 
-        let a = {num1:10}; b = a;
-        console.log(`a : ${a.num1} and b : ${b.num1}`);
-        a.num1 = 30;
-        console.log(`a : ${a.num1} and b : ${b.num1}`);
+        // Using object
+        let obj1 = {num1:10}, obj2=obj1;
+        console.log(`obj1:${obj1.num1}, obj2:${obj2.num1}`);
+        obj1.num1 = 12;
+        console.log(`obj1:${obj1.num1}, obj2:${obj2.num1}`);
     </script>
 </body>
 </html>

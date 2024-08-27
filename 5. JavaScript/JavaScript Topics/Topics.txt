@@ -82,7 +82,7 @@ Break & Continue
 
 Level 10
 ****************
-Anonymous Sunctions As Values
+Anonymous Functions As Values
 Arrow Functions
 setTimeout & setInterval
 Event Listener
